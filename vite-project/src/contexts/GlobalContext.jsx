@@ -5,12 +5,24 @@ const GlobalContext = createContext()
 
 const GlobalContextProvider = ({ children }) => {
     // Inizio elementi da esportare in global context
-    // const blabla = test
+    const navLinks = [
+        {
+            path: '/',
+            title: 'Home'
+        },
+        {
+            path: '/movielist',
+            title: 'Film'
+        }
+    ]
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+
     // Fine elementi da esportare in global context
 
     // Indico cosa esportare
     const globalProviderValue = {
-        //blabla
+        navLinks,
+        backendUrl
     }
 
     return (

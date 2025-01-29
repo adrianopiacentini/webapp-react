@@ -1,9 +1,15 @@
 import { Outlet } from "react-router-dom"
+import AppHeader from "./AppHeader"
+import AppFooter from "./AppFooter"
 
 function AppLayout() {
     return (
         <>
-            <Outlet />
+            <AppHeader />
+            <main className='container'>
+                <Outlet />
+            </main>
+            <AppFooter />
         </>
     )
 }
