@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../contexts/GlobalContext";
+
 function MovieCard({ movie }) {
     const { backendUrl } = useGlobalContext()
 
@@ -10,7 +12,7 @@ function MovieCard({ movie }) {
                     <h5 className="card-title">{movie.title}</h5>
                     <h6>{movie.director}</h6>
                     <p className="card-text">{movie.abstract}</p>
-                    <a href="#" className="btn btn-primary">Mostra dettagli</a>
+                    <Link className="btn btn-primary" to={`/movielist/${movie.id}`}>Mostra dettagli</Link>
                 </div>
             </div>
         </>
